@@ -20,7 +20,8 @@ export default function Home() {
           <div className={styles.introduction}>
             <h3 className={styles.heading}>Our app makes it easy</h3>
             <h1 className={styles.mainHeading}>Soul Surfer Software</h1>
-            <h3 className={styles.heading}>Get all your digital creation needs including marketing, social media, and digital presence. Located in Lovely Lower Lonsdale</h3>
+            <h3 className={styles.heading}>Get all your digital creation needs including marketing, social media,</h3>
+            <h3 className={styles.heading}> and digital presence. Located in Lovely Lower Lonsdale</h3>
           </div>
           <div className={styles.ctas}>
             <a

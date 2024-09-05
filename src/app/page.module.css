@@ -7,7 +7,7 @@
   --button-secondary-hover: #f2f2f2;
 
   display: grid;
-  grid-template-rows: 20px 1fr 20px;
+  grid-template-rows: auto 1fr auto;
   align-items: start;
   justify-items: start;
   min-height: 80svh;
@@ -15,23 +15,12 @@
   gap: 64px;
   font-family: var(--font-geist-sans);
   background-image: url('../app/images/SoulSurferImage\ 1.png');
-  background-size: cover; /* Ensure the background image covers the entire container */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-@media (prefers-color-scheme: dark) {
-  .page {
-    --gray-rgb: 255, 255, 255;
-    --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
-    --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-  }
-}
-
-.header {
+.header, .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,7 +40,7 @@
 }
 
 .navLink:hover {
-  color: #0070f3; /* Change to your preferred hover color */
+  color: #0070f3;
   cursor: pointer;
 }
 
@@ -63,48 +52,20 @@
   border-radius: 10px;
 }
 
-.mainAbout {
+.introduction {
   display: flex;
-  width: 200px;
-}
-
-.introduction{
-  height: 200px;
-  width: 600px;
+  flex-direction: column;
+  gap: 16px; /* Added gap between lines */
 }
 
 .heading {
-  padding: 10px;
-  font-size: 24px; /* Adjust the font size as needed */
+  font-size: 1.5rem; /* Base font size */
   color: #ffffff;
 }
 
 .mainHeading {
-  padding: 10px;
-  font-size: 48px; /* Adjust the font size as needed */
+  font-size: 3rem; /* Base font size */
   color: #ffffff;
-}
-
-.main ol {
-  font-family: var(--font-geist-mono);
-  padding-left: 0;
-  margin: 0;
-  font-size: 14px;
-  line-height: 24px;
-  letter-spacing: -0.01em;
-  list-style-position: inside;
-}
-
-.main li:not(:last-of-type) {
-  margin-bottom: 8px;
-}
-
-.main code {
-  font-family: inherit;
-  background: var(--gray-alpha-100);
-  padding: 2px 4px;
-  border-radius: 4px;
-  font-weight: 600;
 }
 
 .ctas {
@@ -125,8 +86,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
-  line-height: 20px;
+  font-size: 1.25rem; /* Base font size */
+  line-height: 1.25rem;
   font-weight: 500;
   width: 400px;
 }
@@ -143,90 +104,88 @@ a.secondary {
 }
 
 .introductionSection {
-  padding: 16px; /* Optional padding around the section */
+  padding: 16px;
 }
 
 .introductionHeader {
-  font-size: 24px; /* Font size for the header */
-  font-weight: bold; /* Bold text for the header */
-  margin-bottom: 16px; /* Space between the header and the grid */
-  text-align: center; /* Center align the header text */
+  font-size: 1.5rem; /* Base font size */
+  font-weight: bold;
+  margin-bottom: 16px;
+  text-align: center;
 }
 
 .gridContainer {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Create three equal columns */
-  gap: 16px; /* Space between grid items */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
   padding: 40px 100px;
 }
 
 .gridItem {
-  background-color: #f9f9f9; /* Background color for each grid item */
-  border: 1px solid #ddd; /* Border for each grid item */
-  border-radius: 8px; /* Rounded corners for each grid item */
-  text-align: center; /* Center text and image inside each grid item */
-  padding: 16px; /* Padding inside each grid item */
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  padding: 16px;
 }
 
 .image {
-  max-width: 100%; /* Ensure the image does not overflow its container */
-  height: auto; /* Maintain aspect ratio of the image */
-  border-radius: 4px; /* Optional: rounded corners for the image */
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 .title {
-  margin-top: 12px; /* Space between image and title */
-  font-size: 18px; /* Font size for the title */
-  color: #333; /* Color for the title text */
+  margin-top: 12px;
+  font-size: 1.125rem; /* Base font size */
+  color: #333;
 }
-
-
 
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 20px; /* Adjust padding as needed */
+  padding: 20px;
   background-color: #505050;
-  border-top: 1px solid #ddd; /* Optional: border on top of the footer */
+  border-top: 1px solid #ddd;
   color: #ffffff;
 }
 
 .footerSection {
   display: flex;
   flex-direction: column;
-  flex: 1; /* Ensure each section takes up equal space */
-  margin: 0 10px; /* Space between sections */
+  flex: 1;
+  margin: 0 10px;
   color: #ffffff;
 }
 
 .footerTitle {
-  font-size: 16px; /* Font size for the footer titles */
-  font-weight: bold; /* Bold text for the titles */
-  border-bottom: 2px solid #333; /* Line under the title */
-  padding-bottom: 8px; /* Space between the title and the line */
-  margin-bottom: 16px; /* Space between the line and the list */
+  font-size: 1rem; /* Base font size */
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
   color: #ffffff;
 }
 
 .footerList {
-  list-style-type: none; /* Remove default list styling */
-  padding: 0; /* Remove default padding */
-  margin: 0; /* Remove default margin */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   color: #ffffff;
 }
 
 .footerList li {
-  margin-bottom: 8px; /* Space between list items */
+  margin-bottom: 8px;
   color: #ffffff;
 }
 
 .footerLink {
-  text-decoration: none; /* Remove underline from links */
+  text-decoration: none;
   color: #ffffff;
 }
 
 .footerLink:hover {
-  text-decoration: underline; /* Underline links on hover */
+  text-decoration: underline;
 }
 
 .footer div {
@@ -237,69 +196,44 @@ a.secondary {
 
 .footer img {
   flex-shrink: 0;
-}
-
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
+  max-width: 100px; /* Adjust logo size */
 }
 
 @media (max-width: 600px) {
-
-  .header{
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
-  .footer{
-    padding: 32px;
-    padding-bottom: 80px;
-  }
-
   .page {
-    padding: 32px;
-    padding-bottom: 80px;
+    padding: 16px;
+    gap: 32px; /* Reduce gap for mobile */
+  }
+
+  .header, .footer {
+    padding: 16px;
   }
 
   .main {
-    align-items: center;
+    padding: 0; /* Remove padding for mobile */
   }
 
-  .main ol {
-    text-align: center;
+  .introduction {
+    padding: 0;
   }
 
-  .ctas {
-    flex-direction: column;
+  .heading {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .mainHeading {
+    font-size: 2rem; /* Smaller font size for mobile */
   }
 
   .ctas a {
-    font-size: 14px;
+    font-size: 1rem; /* Smaller font size for mobile */
     height: 40px;
     padding: 0 16px;
+    width: auto; /* Adjust width for mobile */
   }
 
-  a.secondary {
-    min-width: auto;
-  }
-
-  .footer {
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  .footer img {
+    max-width: 80px; /* Smaller logo size for mobile */
   }
 }
 
