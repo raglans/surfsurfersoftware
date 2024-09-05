@@ -17,7 +17,12 @@ export default function About() {
       </header>
       <div className={styles.page}>
         <main className={styles.main}>
-            <h1 className={styles.mainHeading}>About</h1>
+            <div className={styles.mainAbout}>
+                <h1 className={styles.mainHeading}>About</h1>
+                <h3>Soul Surfer Software was created in response to help small businesses</h3>
+                <h3>adapt to the new digital challenges of the future.</h3>
+                <h3>Formed in 2024</h3>
+            </div>
             <div className={styles.imageContainer}>
                 <Image src={ExampleImage} alt="Image 1" className={styles.image} />
             </div>
@@ -25,7 +30,7 @@ export default function About() {
       </div>
 
       <div className={styles.introductionSection}>
-        <h1 className={styles.introductionHeader}>See how we did it</h1>
+        <h1 className={styles.introductionHeader}>See what we do</h1>
         <main className={styles.gridContainer}>
           <div className={styles.gridItem}>
             <Image src={ExampleImage} alt="Image 1" className={styles.image} />

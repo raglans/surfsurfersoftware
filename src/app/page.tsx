@@ -20,7 +20,7 @@ export default function Home() {
           <div className={styles.introduction}>
             <h3 className={styles.heading}>Our app makes it easy</h3>
             <h1 className={styles.mainHeading}>Soul Surfer Software</h1>
-            <h3 className={styles.heading}>Get all your digital creation needs, marketing, social media, and digital presence with Soul Surfer Software, founded by JSN</h3>
+            <h3 className={styles.heading}>Get all your digital creation needs including marketing, social media, and digital presence. Located in Lovely Lower Lonsdale</h3>
           </div>
           <div className={styles.ctas}>
             <a
@@ -53,7 +53,7 @@ export default function Home() {
       </div>
 
       <div className={styles.introductionSection}>
-        <h1 className={styles.introductionHeader}>See how we did it</h1>
+        <h1 className={styles.introductionHeader}>See what we do</h1>
         <main className={styles.gridContainer}>
           <div className={styles.gridItem}>
             <Image src={ExampleImage} alt="Image 1" className={styles.image} />

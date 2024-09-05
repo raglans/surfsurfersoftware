@@ -63,6 +63,11 @@
   border-radius: 10px;
 }
 
+.mainAbout {
+  display: flex;
+  width: 200px;
+}
+
 .introduction{
   height: 200px;
   width: 600px;
