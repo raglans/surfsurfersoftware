@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import ExampleImage from "../app/images/ExamplePhoto.png"
-import MainLogo from "../app/images/soulsurferlogo.png"
+import ExampleImage from "../../app/images/ExamplePhoto.png"
+import MainLogo from "../../app/images/soulsurferlogo.png"
 import Link from 'next/link';
 
 
-export default function Home() {
+export default function About() {
   return (
     <div>
       <header className={styles.header}>
@@ -17,39 +17,10 @@ export default function Home() {
       </header>
       <div className={styles.page}>
         <main className={styles.main}>
-          <div className={styles.introduction}>
-            <h3 className={styles.heading}>Our app makes it easy</h3>
-            <h1 className={styles.mainHeading}>Soul Surfer Software</h1>
-            <h3 className={styles.heading}>Get all your digital creation needs, marketing, social media, and digital presence with Soul Surfer Software, founded by JSN</h3>
-          </div>
-          <div className={styles.ctas}>
-            <a
-              className={styles.primary}
-              href="/about"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn More
-            </a>
-          </div>
-        </main>
-      </div>
-
-      <div className={styles.introductionSection}>
-        <h1 className={styles.introductionHeader}>Our Services </h1>
-        <main className={styles.gridContainer}>
-          <div className={styles.gridItem}>
-            <Image src={ExampleImage} alt="Image 1" className={styles.image} />
-            <h2 className={styles.title}>Social Media Marketing</h2>
-          </div>
-          <div className={styles.gridItem}>
-            <Image src={ExampleImage} alt="Image 2" className={styles.image} />
-            <h2 className={styles.title}>Community</h2>
-          </div>
-          <div className={styles.gridItem}>
-            <Image src={ExampleImage} alt="Image 3" className={styles.image} />
-            <h2 className={styles.title}>Reaching Out</h2>
-          </div>
+            <h1 className={styles.mainHeading}>About</h1>
+            <div className={styles.imageContainer}>
+                <Image src={ExampleImage} alt="Image 1" className={styles.image} />
+            </div>
         </main>
       </div>
 
