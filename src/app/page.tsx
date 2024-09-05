@@ -26,7 +26,6 @@ export default function Home() {
             <a
               className={styles.primary}
               href="/about"
-              target="_blank"
               rel="noopener noreferrer"
             >
               Learn More
