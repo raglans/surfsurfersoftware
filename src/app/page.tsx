@@ -1,94 +1,93 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import ExampleImage from "../app/images/ExamplePhoto.png"
+import MainLogo from "../app/images/soulsurferlogo.png"
+
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div>
+      <header className={styles.header}>
+        <Image src={MainLogo} alt="mainLogo" className={styles.mainLogo} />
+        <nav className={styles.nav}>
+          <a href="/" className={styles.navLink}>Home</a>
+          <a href="/about" className={styles.navLink}>About</a>
+        </nav>
+      </header>
+      <div className={styles.page}>
+        <main className={styles.main}>
+          <div className={styles.introduction}>
+            <h3 className={styles.heading}>Our app makes it easy</h3>
+            <h1 className={styles.mainHeading}>Soul Surfer Software</h1>
+            <h3 className={styles.heading}>Get all your digital creation needs, marketing, social media, and digital presence with Soul Surfer Software, founded by JSN</h3>
+          </div>
+          <div className={styles.ctas}>
+            <a
+              className={styles.primary}
+              href="/about"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Learn More
+            </a>
+          </div>
+        </main>
+      </div>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
+      <div className={styles.introductionSection}>
+        <h1 className={styles.introductionHeader}>Our Services </h1>
+        <main className={styles.gridContainer}>
+          <div className={styles.gridItem}>
+            <Image src={ExampleImage} alt="Image 1" className={styles.image} />
+            <h2 className={styles.title}>Social Media Marketing</h2>
+          </div>
+          <div className={styles.gridItem}>
+            <Image src={ExampleImage} alt="Image 2" className={styles.image} />
+            <h2 className={styles.title}>Community</h2>
+          </div>
+          <div className={styles.gridItem}>
+            <Image src={ExampleImage} alt="Image 3" className={styles.image} />
+            <h2 className={styles.title}>Reaching Out</h2>
+          </div>
+        </main>
+      </div>
+
+      <div className={styles.introductionSection}>
+        <h1 className={styles.introductionHeader}>See how we did it</h1>
+        <main className={styles.gridContainer}>
+          <div className={styles.gridItem}>
+            <Image src={ExampleImage} alt="Image 1" className={styles.image} />
+            <h2 className={styles.title}>Events</h2>
+          </div>
+          <div className={styles.gridItem}>
+            <Image src={ExampleImage} alt="Image 2" className={styles.image} />
+            <h2 className={styles.title}>Exploration</h2>
+          </div>
+          <div className={styles.gridItem}>
+            <Image src={ExampleImage} alt="Image 3" className={styles.image} />
+            <h2 className={styles.title}>Destinations</h2>
+          </div>
+        </main>
+      </div>
+
       <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <div className={styles.footerSection}>
+          <Image src={MainLogo} alt="mainLogo" className={styles.mainLogo} />
+        </div>
+        <div className={styles.footerSection}>
+          <h2 className={styles.footerTitle}>Links</h2>
+          <ul className={styles.footerList}>
+            <li><a href="/" className={styles.footerLink}>Home</a></li>
+            <li><a href="/about" className={styles.footerLink}>About</a></li>
+          </ul>
+        </div>
+        <div className={styles.footerSection}>
+          <h2 className={styles.footerTitle}>Contact</h2>
+          <ul className={styles.footerList}>
+            <li className={styles.footerLink}>Phone Number:</li>
+            <li className={styles.footerLink}>Email</li>
+          </ul>
+        </div>
       </footer>
     </div>
   );
